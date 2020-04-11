@@ -14,11 +14,11 @@ legend_ecom = {'Q1': 'Most Poor', 'Q2': 'Poor', 'Q3': 'Working Class', 'Q4': 'Ri
 
 def color1(s):
     if s == 'Susceptible':
-        return 'lightblue'
+        return 'blue'
     elif s == 'Infected':
-        return 'gray'
+        return 'darkviolet'
     elif s == 'Recovered_Immune':
-        return 'lightgreen'
+        return 'green'
     elif s == 'Death':
         return 'black'
     elif s == 'Hospitalization':
@@ -31,16 +31,16 @@ def color1(s):
 
 def color2(agent):
     if agent.status == Status.Susceptible:
-        return 'lightblue'
+        return 'blue'
     elif agent.status == Status.Infected:
         if agent.infected_status == InfectionSeverity.Asymptomatic:
-            return 'gray'
+            return 'darkviolet'
         elif agent.infected_status == InfectionSeverity.Hospitalization:
             return 'orange'
         else:
             return 'red'
     elif agent.status == Status.Recovered_Immune:
-        return 'lightgreen'
+        return 'green'
     elif agent.status == Status.Death:
         return 'black'
 
