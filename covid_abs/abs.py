@@ -90,7 +90,7 @@ class Simulation(object):
                 return
 
         ix = int(np.random.randn(1) * self.amplitudes[agent.status])
-        iy = int(np.random.randn(1) * self.amplitudes[agent.status])
+        iy = int(np.random.randn(1) * 3 *self.amplitudes[agent.status])
 
         if (agent.x + ix) <= 0 or (agent.x + ix) >= self.length:
             agent.x -= ix
