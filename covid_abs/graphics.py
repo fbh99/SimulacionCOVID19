@@ -136,7 +136,7 @@ def execute_simulation(sim, **kwargs):
     """
     statistics = {'info': [], 'ecom': []}
 
-    fig, ax = plt.subplots(nrows=1, ncols=3, figsize=[20, 5])
+    fig, ax = plt.subplots(nrows=1, ncols=3, figsize=[20, 8])
     # plt.close()
 
     frames = kwargs.get('iterations', 100)
