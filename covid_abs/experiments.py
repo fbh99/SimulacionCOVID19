@@ -29,7 +29,7 @@ def plot_mean_std(ax, mean, std, legend, color=None):
     ub = [mean[k] + std[k] for k in range(l)]
 
     ax.fill_between(range(l), ub, lb,
-                     color=color, alpha=.5)
+                     color=color, alpha=.2)
     # plot the mean on top
     ax.plot(mean, color, label=legend)
 
