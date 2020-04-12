@@ -5,9 +5,24 @@ import matplotlib.pyplot as plt
 from covid_abs.common import *
 from covid_abs.agents import *
 from covid_abs.abs import *
-from covid_abs.graphics import color1, color3, legend_ecom
+from covid_abs.graphics import color3, legend_ecom
 
-
+def color1(s):
+    if s == 'Susceptible':
+        return 'blue'
+    elif s == 'Infected':
+        return 'darkviolet'
+    elif s == 'Recovered_Immune':
+        return 'green'
+    elif s == 'Death':
+        return 'black'
+    elif s == 'Hospitalization':
+        return 'orange'
+    elif s == 'Severe':
+        return 'red'
+    else:
+        return 'white'
+    
 def plot_mean_std(ax, mean, std, legend, color=None):
     l = len(mean)
     lb = [mean[k] - std[k] for k in range(l)]
