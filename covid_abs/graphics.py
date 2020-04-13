@@ -9,7 +9,7 @@ from covid_abs.abs import *
 from matplotlib import animation, rc
 from IPython.display import HTML
 
-legend_ecom = {'Q1': 'Most Poor', 'Q2': 'Poor', 'Q3': 'Working Class', 'Q4': 'Rich', 'Q5': 'Most Rich'}
+legend_ecom = {'Q1': 'Estrato 1', 'Q2': 'Estrato 2', 'Q3': 'Estrato 3', 'Q4': 'Estrato 4', 'Q5': 'Estrato 5', 'Q6': 'Estrato 6'}
 
 
 def color1(s):
@@ -49,13 +49,15 @@ def color3(a):
     if a == 'Q1':
         return 'red'
     elif a == 'Q2':
-        return 'orange'
-    elif a == 'Q3':
         return 'yellow'
+    elif a == 'Q3':
+        return 'aqua'
     elif a == 'Q4':
-        return 'green'
-    elif a == 'Q5':
         return 'blue'
+    elif a == 'Q5':
+        return 'darkviolet'
+    elif a == 'Q6':
+        return 'green'
 
 
 def update_statistics(sim, statistics):
