@@ -63,7 +63,7 @@ class Simulation(object):
 
         # Share the common wealth of 10^4 among the population, according each agent social stratum
         wealth = 10 ** 4
-        for quintil in [0, 1, 2, 3, 4]:
+        for quintil in [0, 1, 2, 3, 4, 5]:
             total = lorenz_curve[quintil] * wealth
             qty = max(1.0, np.sum([1 for a in self.population if a.social_stratum == quintil and a.age >= 18]))
             share = total / qty
@@ -201,7 +201,7 @@ class Simulation(object):
                 self.statistics[infected_status.name] = np.sum([1 for a in self.population if
                                                                 a.infected_status == infected_status and a.status != Status.Death]) / self.population_size
 
-            for quintil in [0, 1, 2, 3, 4]:
+            for quintil in [0, 1, 2, 3, 4, 5]:
                 self.statistics['Q{}'.format(quintil + 1)] = np.sum(
                     [a.wealth for a in self.population if a.social_stratum == quintil \
                      and a.age >= 18 and a.status != Status.Death])
@@ -297,7 +297,7 @@ class MultiPopulationSimulation(Simulation):
                                            simulation.get_population())])
                 self.statistics[infected_status.name] /= self.total_population
 
-            for quintil in [0, 1, 2, 3, 4]:
+            for quintil in [0, 1, 2, 3, 4, 5]:
                 for simulation in self.simulations:
                     key = 'Q{}'.format(quintil + 1)
                     self.statistics[key] = np.sum([a.wealth for a in simulation.get_population() \
