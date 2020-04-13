@@ -178,6 +178,7 @@ def execute_simulation(sim, **kwargs):
 
     ax[2].set_title('Economical Impact')
     ax[2].set_xlim((0, frames))
+    ax[2].set_ylim((0, 7000))
 
     for col in df2.columns.values:
         linhas2[col], = ax[2].plot(df2.index.values, df2[col].values, c=color3(col), label=legend_ecom[col])
