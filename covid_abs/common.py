@@ -14,11 +14,11 @@ age_death_probs = [0.002, 0.00006, 0.0003, 0.0008, 0.0015, 0.006, 0.022, 0.051, 
 ## Citar fontes
 
 """
-Wealth distribution - Lorenz Curve
+Wealth distribution
 
-By quintile, source: https://www.worldbank.org/en/topic/poverty/lac-equity-lab1/income-inequality/composition-by-quintile
+By stratum, source: http://www.sdp.gov.co/sites/default/files/evolucion-balance-financiero_0.pdf
 """
 
-lorenz_curve = [.04, .08, .13, .20, .55]
+lorenz_curve = [.041, .232, .359, .187, .091, .091]
 share = np.min(lorenz_curve)
 basic_income = np.array(lorenz_curve)/share
