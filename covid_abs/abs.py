@@ -90,17 +90,17 @@ class Simulation(object):
                 return
 
         ix = int(np.random.randn(1) * self.amplitudes[agent.status])
-        iy = int(np.random.randn(1) * 3 *self.amplitudes[agent.status])
+        iy = int(np.random.randn(1) * self.amplitudes[agent.status])
 
         if (agent.x + ix) <= 0 or (agent.x + ix) >= self.length:
             agent.x -= ix
         else:
             agent.x += ix
 
-        if (agent.y + iy) <= 0 or (agent.y + iy) >= self.height:
-            agent.y -= iy
+        if (agent.y + 3 * iy) <= 0 or (agent.y + 3 * iy) >= self.height:
+            agent.y -= 3 * iy
         else:
-            agent.y += iy
+            agent.y += 3 * iy
 
         dist = np.sqrt(ix ** 2 + iy ** 2)
         result_ecom = np.random.rand(1)
