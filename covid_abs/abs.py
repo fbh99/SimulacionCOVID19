@@ -61,8 +61,8 @@ class Simulation(object):
         for i in np.arange(0, self.population_size - len(self.population)):
             self.create_agent(Status.Susceptible)
 
-        # Share the common wealth of 10^4 among the population, according each agent social stratum
-        wealth = 10 ** 4
+        # Share the common wealth of 10^4 among the population, according each agent social stratum 10 ** 4
+        wealth = 7000
         for quintil in [0, 1, 2, 3, 4, 5]:
             total = lorenz_curve[quintil] * wealth
             qty = max(1.0, np.sum([1 for a in self.population if a.social_stratum == quintil and a.age >= 18]))
