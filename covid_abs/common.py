@@ -14,9 +14,9 @@ age_death_probs = [0.002, 0.00006, 0.0003, 0.0008, 0.0015, 0.006, 0.022, 0.051, 
 ## Citar fontes
 
 """
-Wealth distribution
+Wealth distribution in Bogotá
 
-By stratum, source: http://www.sdp.gov.co/sites/default/files/evolucion-balance-financiero_0.pdf
+By stratum, source:  http://www.sdp.gov.co/sites/default/files/evolucion-balance-financiero_0.pdf
 """
 
 lorenz_curve = [.041, .232, .359, .187, .091, .091]
